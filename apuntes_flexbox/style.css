@@ -1,0 +1,116 @@
+
+/*A la hora de usar flex box debemos tener un cuenta que usamos un eje principal y un eje tranversalc que dependera de como usemos laç
+propiedad flex-direction, si esta es row o row-reverse el eje pricipal es el de las x y el tranversal el de la y; en cmabio si el
+flex-direction esta en column o column-reverse es al contrario*/
+
+
+div#divPrincipal{ /*Estilo del div contenedor*/
+    background-color: beige;
+    border: 2px solid black;
+    display: flex; /*Se pone en el contenedor que tiene dentro a los items*/
+    /*justify-content: space-around;*/
+    padding: 10px;
+}
+
+#item1{ /*Estilo de los items*/
+    width: 60px;
+    /*border: 1px solid black;*/
+    margin-left: 2px;
+    height: 45px;
+    padding: 20px;
+    background-image: linear-gradient(red, white);
+    text-align: center;
+    font-weight: bold;
+    flex-grow: 1; /*El espacio sobrante del contenedor se divide en 5 partes de las cuale a este item le pertece 1*/
+    flex-shrink: 2;/*Cuando falta espacio porque se añada otro item entre todos los elementos juntan 7 partes de las cuales cogemos 2 de este item*/
+}
+
+#item2{ /*Estilo de los items*/
+    width: 60px;
+    /*border: 1px solid black;*/
+    background-image: linear-gradient(red, white);
+    margin-left: 2px;
+    height: 45px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    flex-grow: 1;/*El espacio sobrante del contenedor se divide en 5 partes de las cuale a este item le pertece 1*/
+    flex-shrink: 2;/*Cuando falta espacio porque se añada otro item entre todos los elementos juntan 7 partes de las cuales cogemos 2 de este item*/
+}
+
+#item3{
+    width: 60px;
+    /*border: 1px solid black;*/
+    margin-left: 2px;
+    height: 45px;
+    background-image: linear-gradient(red, white);
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    flex-grow: 2;/*El espacio sobrante del contenedor se divide en 5 partes de las cuale a este item le pertece 2*/
+    flex-shrink: 1;/*Cuando falta espacio porque se añada otro item entre todos los elementos juntan 7 partes de las cuales cogemos 1 de este item*/
+}
+
+#item4{ /*Estilo de los items*/
+    width: 60px;
+    /*border: 1px solid black;*/
+    background-image: linear-gradient(red, white);
+    margin-left: 2px;
+    height: 45px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    flex-grow: 1;/*El espacio sobrante del contenedor se divide en 5 partes de las cuale a este item le pertece 1*/
+    flex-shrink: 2;/*Cuando falta espacio porque se añada otro item entre todos los elementos juntan 7 partes de las cuales cogemos 2 de este item*/
+}
+
+
+/*----DEBAJO DEL NAV----*/
+div#flex-container{
+    margin-top: 40px;
+    margin-left: 20px;
+    /*background-color: beige;*/
+    height: 620px;
+    padding: 10px;
+    /*border: 2px solid black;*/
+    display: flex;
+    justify-content: space-around;/*Espacia de forma regular los elementos que no están alineados a la izquierda y a la derecha del 
+    contenedor. Usamos el justify-content para escoger como se alinean horizontalmnete los elementos. Solo se usa si el
+    flex-direction esta en row*/
+    flex-wrap: wrap;/*Esta línea hace que cuando el espacio sea menor los elementos se vayan a la siguienteb fila y conserven su anchura*/
+    font-weight: bold;
+}
+
+div#flex-container div{
+    width: 310px;
+    height: 340px;
+    background-image: linear-gradient(rgb(243, 90, 90), red);
+    border: 2px solid black;
+    margin-left: 4px;
+    text-align: justify;  
+    margin-top: 10px;
+}
+
+div#flex-container-2{
+    margin-top: 40px;
+    margin-left: 20px;
+    /*background-color: beige;*/
+    height: 620px;
+    padding: 10px;
+    /*border: 2px solid black;*/
+    display: flex;
+    flex-direction: column-reverse;/*Aplicamos el eje pricipal al eje de las y*/
+    align-items: center;/*Se mueve en el eje tranversal, en este caso al cnetro en el eje de las x. Con align items movemos los elementos
+    en el eje contrario al principal (que lo determina el flex-direction)*/
+    font-weight: bold;
+}
+
+div#flex-container-2 div{
+    width: 310px;
+    height: 340px;
+    background-image: linear-gradient(rgb(243, 90, 90), red);
+    border: 2px solid black;
+    margin-left: 4px;
+    text-align: justify;  
+    margin-top: 10px;
+}
